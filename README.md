@@ -93,7 +93,7 @@ This module does not include demo data. Create records from the UI via the Libra
 ## 🙋‍♂️ Author
 
 **Nahom Birhanu**  
-Custom-built for Odoo Technical Developer role interviews.
+
 
 ---
 
