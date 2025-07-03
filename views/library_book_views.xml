@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<odoo>
+  <record id="view_form_library_book" model="ir.ui.view">
+    <field name="name">library.book.form</field>
+    <field name="model">library.book</field>
+    <field name="arch" type="xml">
+      <form string="Library Book">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="author"/>
+            <field name="published_date"/>
+            <field name="price"/>
+            <field name="currency_id"/>
+            <field name="price_total" readonly="1"/>
+          </group>
+          <notebook>
+            <page string="Loans">
+              <field name="loan_ids">
+                <tree editable="bottom">
+                  <field name="member_id"/>
+                  <field name="loan_date"/>
+                  <field name="return_date"/>
+                  <field name="is_returned"/>
+                </tree>
+              </field>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_tree_library_book" model="ir.ui.view">
+    <field name="name">library.book.tree</field>
+    <field name="model">library.book</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="author"/>
+        <field name="price"/>
+        <field name="price_total"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="action_library_book" model="ir.actions.act_window">
+    <field name="name">Library Books</field>
+    <field name="res_model">library.book</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+</odoo>
