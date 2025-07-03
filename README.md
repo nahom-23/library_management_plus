@@ -67,7 +67,7 @@ library_management_plus/
 1. Clone or download this repository.
 
    ```bash
-   git clone https://github.com/yourusername/library_management_plus.git
+   git clone [https://github.com/nahom-23/library_management_plus.git]
    ```
 
 2. Copy the folder to your Odoo `addons` directory:
